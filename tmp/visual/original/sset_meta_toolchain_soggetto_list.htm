@@ -1,0 +1,890 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >Modifica selezionati</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Esporta selezionati</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Cancella selezionati</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+		
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Mostra il pannello di ricerca</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="nome_schema_soggetto_export.php"  {$exportlink_attrs}>Esporta i risultati</a></li>
+		{END export_link}
+
+		
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Login</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>Log out</a></li>
+		{END logoutbutton}
+		
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+
+{BEGIN container_breadcrumbs}
+<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class="    "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Ricerca
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostra opzioni</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>Tutte le condizioni</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>Ogni condizione</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>nascondi</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+		 
+		{BEGIN searchCtrlBlock_id_asr}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_id_asr}" {$filterRow_attrs_id_asr}>
+			<label>
+			
+			{$label nome_schema_soggetto id_asr}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_id_asr}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_id_asr}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_id_asr}</span>
+		</div>
+		{END searchCtrlBlock_id_asr}
+		 
+		{BEGIN searchCtrlBlock_codice_fiscale}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_codice_fiscale}" {$filterRow_attrs_codice_fiscale}>
+			<label>
+			
+			{$label nome_schema_soggetto codice_fiscale}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_codice_fiscale}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_codice_fiscale}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_codice_fiscale}</span>
+		</div>
+		{END searchCtrlBlock_codice_fiscale}
+		 
+		{BEGIN searchCtrlBlock_cognome}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_cognome}" {$filterRow_attrs_cognome}>
+			<label>
+			
+			{$label nome_schema_soggetto cognome}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_cognome}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_cognome}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_cognome}</span>
+		</div>
+		{END searchCtrlBlock_cognome}
+		 
+		{BEGIN searchCtrlBlock_nome}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_nome}" {$filterRow_attrs_nome}>
+			<label>
+			
+			{$label nome_schema_soggetto nome}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_nome}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_nome}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_nome}</span>
+		</div>
+		{END searchCtrlBlock_nome}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Cerca</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostra tutto</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Aggiungi nuovo</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>Aggiungi nuovo inline</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>Cancella</button>
+	{END deleteselected_link}
+			{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>Salva tutto</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>Annulla modifica</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin pull-right text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Stampa facile">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scopo:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="nome_schema_soggetto_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Stampa tutte le pagine
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="nome_schema_soggetto_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Stampa questa pagina
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Stampa il selezionato
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											Record per pagina:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Stampa</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=codice_fiscale]:before {
+		content: "{$label nome_schema_soggetto codice_fiscale}";
+	}
+	.bs-gridcell[data-field=id_asr]:before {
+		content: "{$label nome_schema_soggetto id_asr}";
+	}
+	.bs-gridcell[data-field=cognome]:before {
+		content: "{$label nome_schema_soggetto cognome}";
+	}
+	.bs-gridcell[data-field=nome]:before {
+		content: "{$label nome_schema_soggetto nome}";
+	}
+	.bs-gridcell[data-field=data_nascita_str]:before {
+		content: "{$label nome_schema_soggetto data_nascita_str}";
+	}
+	.bs-gridcell[data-field=comune_residenza_istat]:before {
+		content: "{$label nome_schema_soggetto comune_residenza_istat}";
+	}
+	.bs-gridcell[data-field=comune_domicilio_istat]:before {
+		content: "{$label nome_schema_soggetto comune_domicilio_istat}";
+	}
+	.bs-gridcell[data-field=indirizzo_domicilio]:before {
+		content: "{$label nome_schema_soggetto indirizzo_domicilio}";
+	}
+	.bs-gridcell[data-field=telefono_recapito]:before {
+		content: "{$label nome_schema_soggetto telefono_recapito}";
+	}
+	.bs-gridcell[data-field=tampone_autorizzato]:before {
+		content: "{$label nome_schema_soggetto tampone_autorizzato}";
+	}
+	.bs-gridcell[data-field=id_test_covid]:before {
+		content: "{$label nome_schema_soggetto id_test_covid}";
+	}
+	.bs-gridcell[data-field=criterio_epidemiologico_covid19]:before {
+		content: "{$label nome_schema_soggetto criterio_epidemiologico_covid19}";
+	}
+	.bs-gridcell[data-field=id_laboratorio]:before {
+		content: "{$label nome_schema_soggetto id_laboratorio}";
+	}
+	.bs-gridcell[data-field=data_test_str]:before {
+		content: "{$label nome_schema_soggetto data_test_str}";
+	}
+	.bs-gridcell[data-field=id_ris_tamp]:before {
+		content: "{$label nome_schema_soggetto id_ris_tamp}";
+	}
+	.bs-gridcell[data-field=id_soggetto]:before {
+		content: "{$label nome_schema_soggetto id_soggetto}";
+	}
+	.bs-gridcell[data-field=id_tampone]:before {
+		content: "{$label nome_schema_soggetto id_tampone}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN id_asr_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$id_asr_class}" data-field=id_asr>
+									{BEGIN id_asr_fieldheader}
+																				<span {$id_asr_orderlinkattrs}>
+											{$label nome_schema_soggetto id_asr}
+										</span>
+									{END id_asr_fieldheader}
+									</th>
+									{END id_asr_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN codice_fiscale_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$codice_fiscale_class}" data-field=codice_fiscale>
+									{BEGIN codice_fiscale_fieldheader}
+																				<span {$codice_fiscale_orderlinkattrs}>
+											{$label nome_schema_soggetto codice_fiscale}
+										</span>
+									{END codice_fiscale_fieldheader}
+									</th>
+									{END codice_fiscale_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN cognome_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$cognome_class}" data-field=cognome>
+									{BEGIN cognome_fieldheader}
+																				<span {$cognome_orderlinkattrs}>
+											{$label nome_schema_soggetto cognome}
+										</span>
+									{END cognome_fieldheader}
+									</th>
+									{END cognome_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN nome_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$nome_class}" data-field=nome>
+									{BEGIN nome_fieldheader}
+																				<span {$nome_orderlinkattrs}>
+											{$label nome_schema_soggetto nome}
+										</span>
+									{END nome_fieldheader}
+									</th>
+									{END nome_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN data_nascita_str_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$data_nascita_str_class}" data-field=data_nascita_str>
+									{BEGIN data_nascita_str_fieldheader}
+																				<span {$data_nascita_str_orderlinkattrs}>
+											{$label nome_schema_soggetto data_nascita_str}
+										</span>
+									{END data_nascita_str_fieldheader}
+									</th>
+									{END data_nascita_str_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN criterio_epidemiologico_covid19_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$criterio_epidemiologico_covid19_class}" data-field=criterio_epidemiologico_covid19>
+									{BEGIN criterio_epidemiologico_covid19_fieldheader}
+																				<span {$criterio_epidemiologico_covid19_orderlinkattrs}>
+											{$label nome_schema_soggetto criterio_epidemiologico_covid19}
+										</span>
+									{END criterio_epidemiologico_covid19_fieldheader}
+									</th>
+									{END criterio_epidemiologico_covid19_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN id_test_covid_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$id_test_covid_class}" data-field=id_test_covid>
+									{BEGIN id_test_covid_fieldheader}
+																				<span {$id_test_covid_orderlinkattrs}>
+											{$label nome_schema_soggetto id_test_covid}
+										</span>
+									{END id_test_covid_fieldheader}
+									</th>
+									{END id_test_covid_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN tampone_autorizzato_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$tampone_autorizzato_class}" data-field=tampone_autorizzato>
+									{BEGIN tampone_autorizzato_fieldheader}
+																				<span {$tampone_autorizzato_orderlinkattrs}>
+											{$label nome_schema_soggetto tampone_autorizzato}
+										</span>
+									{END tampone_autorizzato_fieldheader}
+									</th>
+									{END tampone_autorizzato_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN id_laboratorio_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$id_laboratorio_class}" data-field=id_laboratorio>
+									{BEGIN id_laboratorio_fieldheader}
+																				<span {$id_laboratorio_orderlinkattrs}>
+											{$label nome_schema_soggetto id_laboratorio}
+										</span>
+									{END id_laboratorio_fieldheader}
+									</th>
+									{END id_laboratorio_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Modifica"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="Modifica inline"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="Dettagli"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN id_asr_fieldcolumn}
+	<td class="bs-gridcell {$id_asr_class}"  data-field=id_asr {$rowstyle} {$recordattrs}>
+		{$id_asr_value}
+	</td>
+{END id_asr_fieldcolumn}
+
+
+	{BEGIN codice_fiscale_fieldcolumn}
+	<td class="bs-gridcell {$codice_fiscale_class}"  data-field=codice_fiscale {$rowstyle} {$recordattrs}>
+		{$codice_fiscale_value}
+	</td>
+{END codice_fiscale_fieldcolumn}
+
+
+	{BEGIN cognome_fieldcolumn}
+	<td class="bs-gridcell {$cognome_class}"  data-field=cognome {$rowstyle} {$recordattrs}>
+		{$cognome_value}
+	</td>
+{END cognome_fieldcolumn}
+
+
+	{BEGIN nome_fieldcolumn}
+	<td class="bs-gridcell {$nome_class}"  data-field=nome {$rowstyle} {$recordattrs}>
+		{$nome_value}
+	</td>
+{END nome_fieldcolumn}
+
+
+	{BEGIN data_nascita_str_fieldcolumn}
+	<td class="bs-gridcell {$data_nascita_str_class}"  data-field=data_nascita_str {$rowstyle} {$recordattrs}>
+		{$data_nascita_str_value}
+	</td>
+{END data_nascita_str_fieldcolumn}
+
+
+	{BEGIN criterio_epidemiologico_covid19_fieldcolumn}
+	<td class="bs-gridcell {$criterio_epidemiologico_covid19_class}"  data-field=criterio_epidemiologico_covid19 {$rowstyle} {$recordattrs}>
+		{$criterio_epidemiologico_covid19_value}
+	</td>
+{END criterio_epidemiologico_covid19_fieldcolumn}
+
+
+	{BEGIN id_test_covid_fieldcolumn}
+	<td class="bs-gridcell {$id_test_covid_class}"  data-field=id_test_covid {$rowstyle} {$recordattrs}>
+		{$id_test_covid_value}
+	</td>
+{END id_test_covid_fieldcolumn}
+
+
+	{BEGIN tampone_autorizzato_fieldcolumn}
+	<td class="bs-gridcell {$tampone_autorizzato_class}"  data-field=tampone_autorizzato {$rowstyle} {$recordattrs}>
+		{$tampone_autorizzato_value}
+	</td>
+{END tampone_autorizzato_fieldcolumn}
+
+
+	{BEGIN id_laboratorio_fieldcolumn}
+	<td class="bs-gridcell {$id_laboratorio_class}"  data-field=id_laboratorio {$rowstyle} {$recordattrs}>
+		{$id_laboratorio_value}
+	</td>
+{END id_laboratorio_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>
