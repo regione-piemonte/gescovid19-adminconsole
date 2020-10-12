@@ -41,14 +41,15 @@ NOTA. Le sostituzioni devono avvenire nel tag xml e non nelle select.
 
 Una volta effettuate le sostituzioni uscire e salvare il file .phpr.
 
-Avendo precedentemente installato il DB, eseguire doppio click sul file .phpr. Si apre un'istanza di PHPRunner con il progetto caricato.
+Avendo precedentemente installato il DB, eseguire doppio click sul file .phpr. 
+Si apre un'istanza di PHPRunner con il progetto caricato.
 
 # Installing  
 
 - Dopo aver aperto il progetto con PHPRunner eseguire il build
 - Nella cartella build viene prodotto un file `<nome progetto>.zip` contentente il codice PHP 'compilato' a partire dal progetto .phpr
 - Traferire il file .zip nella cartella dell'Apache corrispondente al contesto applicativo
-- `gunzip <nome progetto>.phpr`
+- `gunzip <nome progetto>.zip`
 - Nel file `config.php` modificare i riferimenti al database introducendo username/password/server di produzione
   
 # Versioning  
