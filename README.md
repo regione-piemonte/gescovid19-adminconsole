@@ -39,8 +39,9 @@ NOTA. Le sostituzioni devono avvenire nel tag xml e non nelle select.
 - posizonarsi nella cartella `/subversion/PAGEs.sqllite`
 - sostituire schemaname con il nome dello schema
 
-Una volta effettuate le sostituzioni uscire e salvare il file .phpr
-Avendo prcedentemete installato il DB sul server, eseguire doppio click sul file .phpr. Si apre un'istanza di PHPRunner con il progetto caricato.
+Una volta effettuate le sostituzioni uscire e salvare il file .phpr.
+
+Avendo precedentemente installato il DB, eseguire doppio click sul file .phpr. Si apre un'istanza di PHPRunner con il progetto caricato.
 
 # Installing  
 
