@@ -44,10 +44,11 @@ Avendo prcedentemete installato il DB sul server, eseguire doppio click sul file
 
 # Installing  
 
-- Eseguire il build del progetto .phpr
+- Dopo aver aperto il progetto con PHPRunner eseguire il build
 - Nella cartella build viene prodotto un file `<nome progetto>.zip` contentente il codice PHP 'compilato' a partire dal progetto .phpr
 - Traferire il file .zip nella cartella dell'Apache corrispondente al contesto applicativo
-- Modificare i riferimenti al database introduceto username/password/server di produzione
+- `gunzip <nome progetto>.phpr`
+- Nel file `config.php` modificare i riferimenti al database introducendo username/password/server di produzione
   
 # Versioning  
 
