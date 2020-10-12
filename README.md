@@ -36,7 +36,7 @@ Tuttavia è necessario inizializzarli per poter aprire il file .phpr con il RAD 
 
 NOTA. Le sostituzioni devono avvenire nel tag xml e non nelle select.  
 
-- posizonarsi nella cartella `/subversion/PAGES.sqllite`
+- posizionarsi nella cartella `/subversion/PAGES.sqllite`
 - sostituire schemaname con il nome dello schema
 
 Una volta effettuate le sostituzioni uscire e salvare il file .phpr.
