@@ -24,8 +24,9 @@ Consente di amministrare le utenze e i profili di accesso agli applicativi
   
 # Configurations  
 
+Il file del progetto è `adminconsole.phpr`.
 Per ragioni di riservatezza sono stati eliminati tutti i riferimenti ai server, agli utenti e alle password del database. 
-Tuttavia essi sono necesari per poter aprire il file `adminconsole.phpr` con il RAD PHPRunner.
+Tuttavia è necessario inizializzarli per poter aprire il file .phpr con il RAD PHPRunner.
 
 - utilizzando un editor di testo aprire il file `adminconsole.phpr`
 - sostituire `<schemaname>` con il nome dello schema PostgreSQL
