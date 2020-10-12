@@ -46,10 +46,9 @@ Si apre un'istanza di PHPRunner con il progetto caricato.
 
 # Installing  
 
-- Dopo aver aperto il progetto con PHPRunner eseguire il build
-- Nella cartella build viene prodotto un file `<nome progetto>.zip` contentente il codice PHP 'compilato' a partire dal progetto .phpr
-- Traferire il file .zip nella cartella dell'Apache corrispondente al contesto applicativo
-- `gunzip <nome progetto>.zip`
+- Dopo aver aperto il progetto con PHPRunner compilare utilizzando il pulsante `build`
+- Nella cartella principale viene prodotto un file `<nome progetto>.zip` contentente il codice PHP 'compilato' a partire dal progetto .phpr
+- Tramite la funzione `Publish via FPT` traferire il file compilato nella cartella dell'Apache corrispondente al contesto applicativo
 - Nel file `config.php` modificare i riferimenti al database introducendo username/password/server di produzione
   
 # Versioning  
