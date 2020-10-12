@@ -4,8 +4,6 @@ La piattaforma **GESCOVID19** è un composito di applicazioni create per gestire
 E' stata realizzata dal CSI-Piemonte con tencologie opensource, commissionata e finaniata dalla Regione Piemonte.  
   
 # Project description 
-
-I moduli attualmente disponibili sono:  
   
 **AdminConsole**  è una web application utilizzata dal Servizio di Assistenza applicativa. 
 Consente di amministrare le utenze e i profili di accesso agli applicativi
@@ -18,7 +16,6 @@ Consente di amministrare le utenze e i profili di accesso agli applicativi
 - [PostgreSQL 9.6](https://www.postgresql.org/download/)  
 - [Apache 2.4](https://www.apache.org)  
   
-I linguaggi di programmazione utilizzati sono:  
   
 ## Front-end web:  
   
